@@ -1,0 +1,30 @@
+POST http://127.0.0.1:8000/api/v1/auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "simon",
+    "email": "simon@mail.com",
+    "password": "simon54321",
+    "cpassword": "simon54321"
+}
+
+### LOGIN
+POST http://127.0.0.1:8000/api/v1/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "simon@mail.com",
+    "password": "simon54321"
+}
+
+### PERFIL
+GET http://127.0.0.1:8000/api/v1/auth/profile
+Accept: application/json
+Authorization: Bearer 2|wh1E9fXpj6m5kuKiAL5qtPjyetPnKXQwPJ8Ktjqs5b796c70
+
+### SALIR
+POST http://127.0.0.1:8000/api/v1/auth/logout
+Accept: application/json
+Authorization: Bearer 2|wh1E9fXpj6m5kuKiAL5qtPjyetPnKXQwPJ8Ktjqs5b796c70
