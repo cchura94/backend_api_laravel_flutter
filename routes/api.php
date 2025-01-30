@@ -29,11 +29,18 @@ Route::prefix('v1/auth')->group(function(){
 
 });
 
-// CRUD CATEGORIAS
-Route::apiResource("categoria", CategoriaController::class);
-Route::apiResource("museo", MuseoController::class);
-Route::apiResource("role", RoleController::class);
-Route::apiResource("permiso", PermisoController::class);
+Route::middleware('auth:sanctum')->group(function(){
+    // comentar museo
+    Route::post("museo/{id}/comentario", [MuseoController::class, "funComentar"]);
+    // CRUD CATEGORIAS
+    Route::apiResource("categoria", CategoriaController::class);
+    Route::apiResource("museo", MuseoController::class);
+    Route::apiResource("role", RoleController::class);
+    Route::apiResource("permiso", PermisoController::class);
+});
 
+Route::get("/no-autorizado", function(){
+    return response()->json(["mensaje" => "No autorizado, Necesita un Token de acceso"], 401);
+})->name('login');
 
 

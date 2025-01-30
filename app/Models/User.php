@@ -46,4 +46,19 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function tiene_comentarios(){
+        return $this->belongsToMany(Museo::class, 'museo_user')
+                    ->withPivot(["comentario", "calificacion", "fecha"])
+                    ->withTimestamps();
+    }
+    public function favoritos(){
+        return $this->belongsToMany(Museo::class, "favoritos")
+                        ->withTimestamps();
+    }
+
+    public function roles(){
+        return $this->belongsToMany(Role::class)
+                    ->withTimestamps();
+    }
 }

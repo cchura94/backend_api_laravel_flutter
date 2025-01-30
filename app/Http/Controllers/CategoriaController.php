@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Categoria;
+use Illuminate\Support\Facades\DB;
 
 class CategoriaController extends Controller
 {
@@ -12,7 +13,9 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        $categorias = Categoria::where('estado', true)->get();
+        // $categorias = Categoria::where('estado', true)->get();
+        // $categorias = DB::select("select * from categorias where estado=true");
+        $categorias = DB::table("categorias")->where('estado', true)->get();
 
         return response()->json($categorias, 200);
     }

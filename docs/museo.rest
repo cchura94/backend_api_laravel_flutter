@@ -1,0 +1,26 @@
+GET http://127.0.0.1:8000/api/museo?page=1&limit=5&q=Mus
+Authorization: Bearer 3|7NvE17Vmogi9UQkp5udcnY1UZAdTjxhBHMqcCU9la9132e85
+Accept: application/json
+
+### guardar Museo
+POST http://127.0.0.1:8000/api/museo
+Authorization: Bearer 3|7NvE17Vmogi9UQkp5udcnY1UZAdTjxhBHMqcCU9la9132e85
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nombre": "Museo de METALES",
+    "descripcion": "En este museo se encuentra varios de los metales de muchos años.",
+    "categoria_id": 1
+}
+
+### comentar
+POST http://127.0.0.1:8000/api/museo/2/comentario
+Authorization: Bearer 4|suiN7P5t78ImP1KSVwaSeosDc4GVkNHVGSu3EYvk18bbb622
+Content-Type: application/json
+Accept: application/json
+
+{
+    "comentario": "Las pinturas son muy interesantes, planeo visitar otra vez",
+    "calificacion": 5
+}

@@ -1,12 +1,20 @@
+### peticion al servidor
+GET https://museo.blumbit.net/api/categoria
+Authorization: Bearer 1|2qEQzrBCLVzHhjLM2vh2fPzvRJhOCwzp6eXv5TYb6aac5a7c
+
+
+###
 GET http://127.0.0.1:8000/api/categoria
+Authorization: Bearer 3|7NvE17Vmogi9UQkp5udcnY1UZAdTjxhBHMqcCU9la9132e85
 
 ### guardar categoria
-POST http://127.0.0.1:8000/api/categoria
+POST https://museo.blumbit.net/api/categoria
 Accept: application/json
 Content-Type: application/json
+Authorization: Bearer 1|2qEQzrBCLVzHhjLM2vh2fPzvRJhOCwzp6eXv5TYb6aac5a7c
 
 {
-    "nombre": "PINTURA"
+    "nombre": "ARTE Y PINTURA"
 }
 
 ### Mostrar
@@ -23,3 +31,4 @@ Content-Type: application/json
 }
 ### eliminar
 DELETE http://127.0.0.1:8000/api/categoria/2
+Accept: application/json
