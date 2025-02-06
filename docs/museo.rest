@@ -1,5 +1,5 @@
-GET http://127.0.0.1:8000/api/museo?page=1&limit=5&q=Mus
-Authorization: Bearer 3|7NvE17Vmogi9UQkp5udcnY1UZAdTjxhBHMqcCU9la9132e85
+GET http://museo.blumbit.net/api/museo?page=1&limit=5&q=Mus
+Authorization: Bearer 25|iy64sTmf2JEzgUChYSbQ933kKy6pMntIGDVW1XUb05673ce7
 Accept: application/json
 
 ### guardar Museo
@@ -13,10 +13,33 @@ Accept: application/json
     "descripcion": "En este museo se encuentra varios de los metales de muchos años.",
     "latitud": "-16.500200",
     "longitud": "-68.119560",
+    "horario_atencion": "Lunes a Domingo de 9:00 a 22:00",
     "precio": 20,
     "direccion": "Av 123 Z. ABC",
     "categoria_id": 1
 }
+
+### Modificar Museo
+PUT https://museo.blumbit.net/api/museo/1
+Authorization: Bearer 25|iy64sTmf2JEzgUChYSbQ933kKy6pMntIGDVW1XUb05673ce7
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nombre": "Museo de METALES",
+    "descripcion": "En este museo se encuentra varios de los metales de muchos años.",
+    "latitud": "-16.492049722222",
+    "longitud": "-68.1356875",
+    "horario_atencion": "Lunes a Domingo de 9:00 a 22:00",
+    "precio": 20,
+    "direccion": "Av 123 Z. ABC",
+    "categoria_id": 1
+}
+
+### Mostrar Museo
+GET https://museo.blumbit.net/api/museo/1
+Authorization: Bearer 25|iy64sTmf2JEzgUChYSbQ933kKy6pMntIGDVW1XUb05673ce7
+Accept: application/json
 
 ### comentar
 POST http://127.0.0.1:8000/api/museo/2/comentario
