@@ -5,13 +5,13 @@ Authorization: Bearer 1|2qEQzrBCLVzHhjLM2vh2fPzvRJhOCwzp6eXv5TYb6aac5a7c
 
 ###
 GET http://127.0.0.1:8000/api/categoria
-Authorization: Bearer 3|7NvE17Vmogi9UQkp5udcnY1UZAdTjxhBHMqcCU9la9132e85
+Authorization: Bearer 1|FR4yb2Xv4V4rLfmqggn4EI5D7P4GVLZeDC2XpWlPfe3ea03a
 
 ### guardar categoria
 POST https://museo.blumbit.net/api/categoria
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer 1|2qEQzrBCLVzHhjLM2vh2fPzvRJhOCwzp6eXv5TYb6aac5a7c
+Authorization: Bearer 1|FR4yb2Xv4V4rLfmqggn4EI5D7P4GVLZeDC2XpWlPfe3ea03a
 
 {
     "nombre": "ARTE Y PINTURA"

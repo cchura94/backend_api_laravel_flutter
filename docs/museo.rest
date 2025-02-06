@@ -4,13 +4,17 @@ Accept: application/json
 
 ### guardar Museo
 POST http://127.0.0.1:8000/api/museo
-Authorization: Bearer 3|7NvE17Vmogi9UQkp5udcnY1UZAdTjxhBHMqcCU9la9132e85
+Authorization: Bearer 1|FR4yb2Xv4V4rLfmqggn4EI5D7P4GVLZeDC2XpWlPfe3ea03a
 Content-Type: application/json
 Accept: application/json
 
 {
     "nombre": "Museo de METALES",
     "descripcion": "En este museo se encuentra varios de los metales de muchos años.",
+    "latitud": "-16.500200",
+    "longitud": "-68.119560",
+    "precio": 20,
+    "direccion": "Av 123 Z. ABC",
     "categoria_id": 1
 }
 
