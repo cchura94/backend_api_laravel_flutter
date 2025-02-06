@@ -1,4 +1,10 @@
 ### peticion al servidor
+GET http://35.173.193.33/api/categoria
+Authorization: Bearer 1|NGT4T2rKXioireF2ZDu2Pf2qMCOx4wwFZxzI30uxfcc3d2fc
+
+
+
+### peticion al servidor
 GET https://museo.blumbit.net/api/categoria
 Authorization: Bearer 1|2qEQzrBCLVzHhjLM2vh2fPzvRJhOCwzp6eXv5TYb6aac5a7c
 
